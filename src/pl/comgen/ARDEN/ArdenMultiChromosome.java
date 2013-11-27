@@ -16,6 +16,7 @@ import java.util.Iterator;
  * @author medhat
  * 
  */
+
 public class ArdenMultiChromosome {
 	
 
@@ -123,7 +124,7 @@ public class ArdenMultiChromosome {
 				//Create Configuration file for Arden.
 				FileWriter  fw = new FileWriter(confFile.getAbsoluteFile());
 				BufferedWriter bw = new BufferedWriter(fw);
-				bw.write("$:"+locationOfReferanceChr+chrmosomeNumber+".fasta\n");
+				bw.write("$:"+locationOfReferanceChr+chrmosomeNumber+".fa\n");
 				bw.write("#:"+locationOfArReferanceChr+chrmosomeNumber+".fasta\n");
 				bw.write("&:"+fastq+"\n");
 				bw.write("@"+tool+"\n");
