@@ -121,16 +121,14 @@ public class ArdenMultiChromosome {
 				if(!confFile.exists())
 					confFile.createNewFile();
 				//Create Configuration file for Arden.
-				// remove this line it is customized
-				String t="/home/medhat/NGS/Data/Sample_AT1/AR_mapping/mapComparson/";
 				FileWriter  fw = new FileWriter(confFile.getAbsoluteFile());
 				BufferedWriter bw = new BufferedWriter(fw);
 				bw.write("$:"+locationOfReferanceChr+chrmosomeNumber+".fasta\n");
 				bw.write("#:"+locationOfArReferanceChr+chrmosomeNumber+".fasta\n");
 				bw.write("&:"+fastq+"\n");
 				bw.write("@"+tool+"\n");
-				bw.write("ref:"+t+chrmosomeNumber+".sam\n");
-				bw.write("art:"+t+chrmosomeNumber+"_AR.sam\n");
+				bw.write("ref:"+locationOfMappedCheromosomes+chrmosomeNumber+".sam\n");
+				bw.write("art:"+locationOfMappedCheromosomes+chrmosomeNumber+"_AR.sam\n");
 				bw.write("+");
 				bw.close();
 				
